@@ -7,9 +7,10 @@ from scipy.interpolate import make_interp_spline
 import find_k
 
 def get_pedigree_outcome():
-    plt.scatter(main.pos_outcome['Outcome'], main.pos_outcome['DiabetesPedigreeFunction'], color='r', alpha=0.7)
-    plt.scatter(main.neg_outcome['Outcome'], main.neg_outcome['DiabetesPedigreeFunction'], color='black', alpha=0.7)
-    plt.xlabel("Age")
+    plt.scatter(main.pos_outcome['Outcome'], main.pos_outcome['DiabetesPedigreeFunction'], color="r")
+    plt.scatter(main.neg_outcome['Outcome'], main.neg_outcome['DiabetesPedigreeFunction'], color="b")
+    plt.xticks([0, 1])
+    plt.xlabel("Outcome")
     plt.ylabel("Diabetes Pedigre")
     plt.title("Positive and Negative diabetes in terms of age and pedigre")
     plt.show()
@@ -35,7 +36,8 @@ def get_age_outcome():
     plt.show()
 
 # get_pedigree_outcome()
-# get_age_outcome()
+get_age_outcome()
+# get_k_graph()
 
 
 

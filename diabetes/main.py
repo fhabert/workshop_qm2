@@ -7,7 +7,7 @@ csv_file = "./dataset/data_diabetes.csv"
 dataset = pd.read_csv(csv_file, delimiter=";")
 df = pd.DataFrame(dataset)
 
-sample_points = df[0:180]
+sample_points = df[0:50]
 pos_outcome = sample_points[sample_points["Outcome"] == 1]
 neg_outcome = sample_points[sample_points["Outcome"] == 0]
 

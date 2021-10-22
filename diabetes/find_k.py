@@ -60,14 +60,16 @@ def percentage_score(x_train_data, y_train_data, k):
             count_pos += 1
     return count_pos / len(x_train_data)
 
-score_stored = []
 k_number_test = 70
 k_values = [x for x in range(2, k_number_test)]
 
-for k in range(2, k_number_test):
-    score = percentage_score(x_train_sigmoid, y_train, k)
-    score_stored.append(score)
+def get_scored_store():
+    li = []
+    for k in range(2, k_number_test):
+        score = percentage_score(x_train_sigmoid, y_train, k)
+        li.append(score)
+    return li
 
-
+score_stored = get_scored_store()
 elbow_point = 7
 
